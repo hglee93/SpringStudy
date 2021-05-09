@@ -1,7 +1,6 @@
 package hello.hellospring.service;
 
-import hello.hellospring.Repository.MemberRepository;
-import hello.hellospring.Repository.MemoryMemberRepository;
+import hello.hellospring.repository.MemoryMemberRepository;
 import hello.hellospring.domain.Member;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
