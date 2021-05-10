@@ -4,6 +4,10 @@ import hello.hellospring.domain.Member;
 
 import java.util.*;
 
+/**
+ * 인터페이스를 사용하는 이유?
+ * 구현체를 다르게 사용할 수 있다.
+ */
 public class MemoryMemberRepository implements MemberRepository {
 
     private Map<Long, Member> store = new HashMap<>();
