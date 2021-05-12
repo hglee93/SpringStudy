@@ -6,6 +6,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+/**
+ * 컨트롤러 빈 등록
+ */
 @Controller
 public class HelloController {
     @GetMapping("hello")
