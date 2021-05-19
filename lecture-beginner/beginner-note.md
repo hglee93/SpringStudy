@@ -67,4 +67,5 @@
 - @ResponseBody를 붙이고 객체를 반환하면 자동으로 JSON 변환
 - @ResponseBody를 붙이면 관련 컨트롤러에서 처리 후 ***HttpMessageConverter***가 동작
 
-![image](https://user-images.githubusercontent.com/15210906/118744979-49ecf700-b890-11eb-9a7d-9543ea66f278.png)
+스크린샷 2021-05-19 오전 10.52.16![image](https://user-images.githubusercontent.com/15210906/118745194-a51ee980-b890-11eb-88c1-4e385c65e15c.png)
+
