@@ -2,10 +2,7 @@ package com.hello.core.singleton;
 
 import com.hello.core.AppConfig;
 import com.hello.core.member.MemberRepository;
-import com.hello.core.member.MemberService;
 import com.hello.core.member.MemberServiceImpl;
-import com.hello.core.order.Order;
-import com.hello.core.order.OrderService;
 import com.hello.core.order.OrderServiceImpl;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
@@ -24,11 +21,17 @@ public class ConfigurationSingletonTest {
         OrderServiceImpl orderService = ac.getBean("orderService", OrderServiceImpl.class);
         MemberRepository memberRepository = ac.getBean("memberRepository", MemberRepository.class);
 
-        //System.out.println("memberService -> memberRepository = " + memberService.getMemberRepository());
-        //System.out.println("orderService -> memberRepository = " + orderService.getMemberRepository());
-        //System.out.println("memberRepository = " + orderService.getMemberRepository());
-
         Assertions.assertThat(memberService.getMemberRepository()).isSameAs(memberRepository);
         Assertions.assertThat(orderService.getMemberRepository()).isSameAs(memberRepository);
+    }
+
+    @Test
+    @DisplayName("Configuation 클래스 확인")
+    void configurationDeep() {
+        ApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
+
+        AppConfig appConfig = ac.getBean(AppConfig.class);
+
+        System.out.println("appConfig = " + appConfig);
     }
 }
